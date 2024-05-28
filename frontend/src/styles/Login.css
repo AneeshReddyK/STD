@@ -9,7 +9,7 @@
     width: 300px;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 16px;
     background-color: #f9f9f9;
   }
   
@@ -24,7 +24,7 @@
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 16px;
     box-sizing: border-box;
   }
   

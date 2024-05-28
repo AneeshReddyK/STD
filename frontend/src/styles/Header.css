@@ -1,7 +1,7 @@
 /* Header.css */
 
 .custom-header {
-  background-color: #333; /* Dark background color */
+  background-color: #829292; /* Dark background color */
   color: white; /* White text color */
   padding: 10px 20px; /* Padding for space around content */
   display: flex; /* Flexbox for layout */
@@ -15,8 +15,8 @@
 
 .custom-header .custom-logo {
   margin: 0; /* Remove default margin from h2 */
-  font-size: 1.5rem; /* Increase font size for the logo */
-  margin-left: 20px; /* Move logo slightly inside from the left */
+  font-size: 2rem; /* Increase font size for the logo */
+  margin-left: 40px; /* Move logo slightly inside from the left */
 }
 
 .custom-nav {
@@ -28,9 +28,9 @@
 .custom-nav-links {
   list-style: none; /* Remove bullet points from list */
   display: flex; /* Flexbox for horizontal layout */
-  margin: 0;
+  margin: 10;
   padding: 0;
-  margin-right: 20px; /* Move nav links slightly inside from the right */
+  margin-right: 70px; /* Move nav links slightly inside from the right */
 }
 
 .custom-nav-links li {
@@ -46,7 +46,8 @@
 }
 
 .custom-nav-links li a:hover {
-  background-color: #575757; /* Background color on hover */
+  background-color: #e1dfec; /* Background color on hover */
+  background-color: black;
 }
 
 /* Mobile responsiveness */

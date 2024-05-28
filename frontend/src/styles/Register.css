@@ -1,15 +1,17 @@
+/* SignUpForm.css */
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .sign-up-form {
   width: 300px;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 16px;
   background-color: #f9f9f9;
 }
 
@@ -20,61 +22,25 @@
 .sign-up-form input[type="text"],
 .sign-up-form input[type="email"],
 .sign-up-form input[type="password"] {
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
-  margin: 5px 0;
+  margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
+  border-radius: 15px;
 }
 
-.sign-up-form .submit-btn {
-  width: 100%;
+.sign-up-form button {
+  width: calc(100% - 20px);
   padding: 10px;
-  margin-top: 10px;
+  margin: 10px 10;
   border: none;
-  border-radius: 3px;
+  border-radius: 15px;
   background-color: #007bff;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.sign-up-form .submit-btn:hover {
-  background-color:#007bff;
-}
-
-.success-message,
-.error-message {
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* Button style */
-.login-button {
-  background-color: #007bff;
-  color: white;
-  padding: 11px 126px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top:5px;
-}
-
-.login-button:hover {
-  background-color: #007bff;
-}
-
-
-.logout-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 11px 126px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top:5px;
-}
-
-.logout-button:hover {
-  background-color: #45a049;
+.sign-up-form button:hover {
+  background-color: #0056b3;
 }

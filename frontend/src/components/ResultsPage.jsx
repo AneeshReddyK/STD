@@ -29,21 +29,24 @@ const ResultPage = () => {
 
     return (
         <div className="result-page-container">
-            <h2>Result Details</h2>
-            {error && <p>{error}</p>}
-            {result && (
-                <div>
-                    <p><strong>Hall Ticket Number:</strong> {result.hallticketNo}</p>
-                    <p><strong>Name:</strong> {result.stdname}</p>
-                    <p><strong>English Marks:</strong> {result.english}</p>
-                    <p><strong>Java Marks:</strong> {result.java}</p>
-                    <p><strong>Python Marks:</strong> {result.python}</p>
-                    <p><strong>C++ Marks:</strong> {result.cpp}</p>
-                    <p><strong>Total Marks:</strong> {result.totalMarks}</p>
-                    <p><strong>Grade:</strong> {result.result}</p>
-                </div>
-            )}
-        </div>
+        <h2>Result Details</h2>
+        {error && <p>{error}</p>}
+        {result && (
+          <div className="result-box">
+            <div className="result-details">
+              <p><strong>Hall Ticket Number:</strong> {result.hallticketNo}</p>
+              <p><strong>Name:</strong> {result.stdname}</p>
+              <p><strong>English Marks:</strong> {result.english}</p>
+              <p><strong>Java Marks:</strong> {result.java}</p>
+              <p><strong>Python Marks:</strong> {result.python}</p>
+              <p><strong>C++ Marks:</strong> {result.cpp}</p>
+              <p><strong>Total Marks:</strong> {result.totalMarks}</p>
+              <p><strong>Grade:</strong> {result.result}</p>
+            </div>
+          </div>
+        )}
+      </div>
+      
     );
 };
 

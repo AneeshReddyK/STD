@@ -14,7 +14,7 @@
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     width: 90%;
-    max-width: 400px; /* Max width for the form */
+    max-width: 250px; /* Max width for the form */
 }
 
 .view-results-container h2 {

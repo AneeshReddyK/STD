@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../../src/styles/StudentForm.css'; // Import the CSS file with the styles
-import { FaEdit } from 'react-icons/fa'; // Import the edit icon from react-icons library
+import '../../src/styles/StudentForm.css'; // Adjust the path as needed
 import MainLayout from './MainLayout';
 
 const StudentForm = () => {
@@ -13,6 +12,7 @@ const StudentForm = () => {
   const [cppMarks, setCppMarks] = useState('');
   const [error, setError] = useState('');
   const [submissionError, setSubmissionError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,8 +29,6 @@ const StudentForm = () => {
     const pythonMarksInt = parseInt(pythonMarks, 10);
     const cppMarksInt = parseInt(cppMarks, 10);
 
-    const result = englishMarksInt >= 35 && javaMarksInt >= 35 && pythonMarksInt >= 35 && cppMarksInt >= 35 ? 'Pass' : 'Fail';
-
     try {
       const response = await axios.post('http://localhost:3001/student/studentform', {
         stdname,
@@ -40,7 +38,7 @@ const StudentForm = () => {
         python: pythonMarksInt,
         cpp: cppMarksInt
       });
-      console.log(response.data);
+      setSuccessMessage('Student details submitted successfully.');
       setStdname('');
       setHallticketNo('');
       setEnglishMarks('');
@@ -64,8 +62,9 @@ const StudentForm = () => {
           <h2>Student Form</h2>
           {error && <p className="error">{error}</p>}
           {submissionError && <p className="error">{submissionError}</p>}
+          {successMessage && <p className="success">{successMessage}</p>}
           <form className="form" onSubmit={handleSubmit}>
-            <div>
+            <div className="input-wrapper">
               <label htmlFor="stdname">Student Name:</label>
               <input
                 type="text"
@@ -74,9 +73,8 @@ const StudentForm = () => {
                 onChange={(e) => setStdname(e.target.value)}
                 required
               />
-              <FaEdit className="edit-icon" />
             </div>
-            <div>
+            <div className="input-wrapper">
               <label htmlFor="hallticketNo">Hall Ticket Number:</label>
               <input
                 type="text"
@@ -85,9 +83,8 @@ const StudentForm = () => {
                 onChange={(e) => setHallticketNo(e.target.value)}
                 required
               />
-              <FaEdit className="edit-icon" />
             </div>
-            <div>
+            <div className="input-wrapper">
               <label htmlFor="englishMarks">English Marks:</label>
               <input
                 type="number"
@@ -96,9 +93,8 @@ const StudentForm = () => {
                 onChange={(e) => setEnglishMarks(e.target.value)}
                 required
               />
-              <FaEdit className="edit-icon" />
             </div>
-            <div>
+            <div className="input-wrapper">
               <label htmlFor="javaMarks">Java Marks:</label>
               <input
                 type="number"
@@ -107,9 +103,8 @@ const StudentForm = () => {
                 onChange={(e) => setJavaMarks(e.target.value)}
                 required
               />
-              <FaEdit className="edit-icon" />
             </div>
-            <div>
+            <div className="input-wrapper">
               <label htmlFor="pythonMarks">Python Marks:</label>
               <input
                 type="number"
@@ -118,9 +113,8 @@ const StudentForm = () => {
                 onChange={(e) => setPythonMarks(e.target.value)}
                 required
               />
-              <FaEdit className="edit-icon" />
             </div>
-            <div>
+            <div className="input-wrapper">
               <label htmlFor="cppMarks">C++ Marks:</label>
               <input
                 type="number"
@@ -129,7 +123,6 @@ const StudentForm = () => {
                 onChange={(e) => setCppMarks(e.target.value)}
                 required
               />
-              <FaEdit className="edit-icon" />
             </div>
             <button type="submit">Submit</button>
           </form>

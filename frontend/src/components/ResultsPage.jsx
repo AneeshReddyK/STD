@@ -3,11 +3,17 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import '../../src/styles/ResultsPage.css';
 import MainLayout from './MainLayout';
+import { GoBackButton } from './Logout';
 
 const ResultPage = () => {
     const { hallTicketNo } = useParams();
     const [result, setResult] = useState(null);
     const [error, setError] = useState('');
+    
+    const buttonPosition = {
+        top: '550px',
+        left: '740px',
+    };
 
     useEffect(() => {
         const fetchResult = async () => {
@@ -48,7 +54,9 @@ const ResultPage = () => {
                         </div>
                     </div>
                 )}
+                <GoBackButton  position={buttonPosition} />
             </div>
+            
         </MainLayout>
 
     );

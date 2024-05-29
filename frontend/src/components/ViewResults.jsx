@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../src/styles/ViewResults.css';
 import MainLayout from './MainLayout';
+import { GoBackButton } from './Logout';
 
 const ViewResults = () => {
     const [hallticketNo, setHallticketNo] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
+
+    const buttonPosition = {
+        top: '535px',
+        left: '740px',
+    };
 
     const handleViewResults = () => {
         if (hallticketNo.trim() === '') {
@@ -34,6 +40,7 @@ const ViewResults = () => {
                     {errorMessage && <p className="error-message">{errorMessage}</p>}
                     <button onClick={handleViewResults}>View Results</button>
                 </div>
+                <GoBackButton position={buttonPosition} />
             </div>
         </MainLayout>
     );

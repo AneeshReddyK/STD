@@ -7,9 +7,7 @@ import '../../src/styles/MainLayout.css'; // Import the CSS file
 const MainLayout = ({children}) => {
   const accordionItems = [
     { title: 'StudentsForm', link: '/studentsForm' },
-    { title: 'Results', link: '/Viewresults' },
-    { title: 'Pass', link: '/Pass' },
-    { title: 'Fail', link: '/Fail' },
+    { title: 'Results', link: '/Results' },
     { title: 'Graph', link: '/Graph' }
   ];
 

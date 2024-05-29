@@ -20,19 +20,17 @@ export default LogoutForm;
 
 // component for going back to the page //
 
-    export const GoBack = () => {
+export const GoBackButton = ({ position }) => {
+  const navigate = useNavigate();
 
-      const navigate = useNavigate();
-    
-      const handleGoBack = () => {
-        navigate('/');
-      };
-    
-      return (
-       
-          <button onClick={handleGoBack}>Go Back</button>
-       
-      )
-    };
+  const goBack = () => {
+    navigate(-1); // Go back one step in history
+  };
+
+  return (
+    <button onClick={goBack} style={{ position: 'absolute', ...position, backgroundColor: 'blue', color: 'white', padding: '10px', border: 'none', borderRadius: '5px' }}>Go Back</button>
+  );
+};
+
 
 

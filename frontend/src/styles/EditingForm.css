@@ -1,0 +1,83 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+  
+  .form-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    background-color: #f9f9f9;
+    margin: 0 auto; /* Centering the form container horizontally */
+  }
+  
+  .form-container h2 {
+    text-align: center;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="number"],
+  .form-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    box-sizing: border-box;
+  }
+  
+  .form-container button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .input-wrapper {
+    position: relative;
+  }
+  
+  .edit-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .success {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .form-container {
+      width: 90%;
+      padding: 15px;
+    }
+    
+    .form-container h2 {
+      font-size: 1.5rem;
+    }
+    
+    .form-container input[type="text"],
+    .form-container input[type="number"],
+    .form-container button[type="submit"] {
+      padding: 8px;
+      margin: 4px 0;
+    }
+  }
+  

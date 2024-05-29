@@ -12,7 +12,9 @@ function Header() {
         <h2 className="custom-logo">RESULTS</h2>
         <ul className="custom-nav-links">
           {isLoggedIn ? (
-            <li><Link to="/logout">Logout</Link></li>
+            <>
+              <li><Link to="/logout">Logout</Link></li>
+            </>
           ) : (
             <li><Link to="/login">Sign In</Link></li>
           )}

@@ -1,6 +1,6 @@
 /* HomePage.css */
 
-.buttons-container {
+/* .buttons-container {
     text-align: center;
     padding: 20px;
   }
@@ -10,5 +10,26 @@
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-  }
+  } */
   
+
+  /* styles.css */
+
+/* Centering the h1 element */
+.home-page h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  margin: 0;
+  font-size: 4em;
+  color: #6be088;
+}
+
+/* Mobile compatibility */
+@media (max-width: 600px) {
+  .home-page h1 {
+    font-size: 1.5em;
+  }
+}

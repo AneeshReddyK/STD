@@ -8,13 +8,14 @@ const LogoutForm = () => {
 
   useEffect(() => {
     logout();
-    navigate('/signin');
+    navigate('/login'); // Redirect to sign-in page after logging out
   }, [logout, navigate]);
 
   return null; // Render nothing
 };
 
 export default LogoutForm;
+
 
 
 // component for going back to the page //

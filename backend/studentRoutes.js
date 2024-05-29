@@ -165,4 +165,10 @@ router.post('/studentform', (req, res) => {
 
 });
 
-module.exports = router;
+// <<<<<<< HEAD
+// module.exports = router;
+// =======
+
+
+// module.exports = router;
+// >>>>>>> upstream/master

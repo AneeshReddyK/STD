@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 import '../../src/styles/Login.css';
-
-
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-  
+  const { login } = useAuth(); // Get the login function from AuthContext
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:3000/auth/signin', { email: username, password });
-      // login();
+      login(); // Call login function to set isLoggedIn to true
       setUsername('');
       setPassword('');
       setError('');
@@ -34,7 +33,6 @@ const LoginForm = () => {
   };
 
   return (
-    
     <div className="container">
       <div className="center">
         <h2>Login</h2>

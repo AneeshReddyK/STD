@@ -37,14 +37,14 @@
 }
 
 .view-results-container button {
-    background-color: #007bff; /* Green background for button */
+    background-color: #007bff; /* blue background for button */
     color: white; /* White text color */
     cursor: pointer; /* Pointer cursor on hover */
     border: none; /* Remove default border */
 }
 
 .view-results-container button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #007bff; /* Darker green on hover */
 }
 
 .view-results-container .error-message {

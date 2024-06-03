@@ -9,7 +9,7 @@ function Header() {
   return (
     <header className="custom-header">
       <nav className="custom-nav">
-        <h2 className="custom-logo">RESULTS</h2>
+        <h2 className="custom-logo">EXAM-PORTAL</h2>
         <ul className="custom-nav-links">
           {isLoggedIn ? (
             <>
